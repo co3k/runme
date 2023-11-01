@@ -3,26 +3,11 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { loadSchemaSync } from '@graphql-tools/load';
 import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
 
+import { resolvers } from './resolver/resolver';
+
 const typeDefs = loadSchemaSync('../schema.graphql', {
   loaders: [new GraphQLFileLoader()],
 });
-
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-];
-
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-};
 
 const server = new ApolloServer({
   typeDefs,
