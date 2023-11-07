@@ -3,7 +3,7 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { loadSchemaSync } from '@graphql-tools/load';
 import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
 
-import { resolvers } from './resolver/resolver';
+import { resolvers } from './resolver/resolver.js';
 
 const typeDefs = loadSchemaSync('../schema.graphql', {
   loaders: [new GraphQLFileLoader()],

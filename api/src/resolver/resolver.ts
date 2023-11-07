@@ -1,8 +1,8 @@
-import { books } from './query';
+import { posts } from './query.js';
 
 export const resolvers = {
   Query: {
-    books,
+    posts,
   },
 };
 

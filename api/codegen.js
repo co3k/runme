@@ -1,7 +1,5 @@
 
-import type { CodegenConfig } from '@graphql-codegen/cli';
-
-const config: CodegenConfig = {
+const config = {
   overwrite: true,
   schema: "../schema.graphql",
   generates: {

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "npm run codegen && tsc",
-    "start": "npm run compile && node ./dist/index.js",
-    "codegen": "graphql-codegen --config codegen.ts"
+    "start": "rm -rf ./dist/ && npm run compile && node ./dist/index.js",
+    "codegen": "graphql-codegen --config codegen.js"
   },
   "keywords": [],
   "author": "",

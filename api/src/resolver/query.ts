@@ -1,4 +1,4 @@
-export const books = () => [
+export const posts = () => [
   {
     title: 'The Awakening',
     author: 'Kate Chopin',
